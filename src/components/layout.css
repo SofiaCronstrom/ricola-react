@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+  margin: 0;
+}
+:root{
+  --green: #005346;
+  --yellow: #FACB05;
+}
+
+
+/*   header    */
+
+.header{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main{
+
+}
+
+
+.ricola-logo{
+  width: 6em;
+  height: 5em;
+}
+
+.main-bg{
+  background-image: url('../images/farmer.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.circle{
+  font-size: .8rem;
+  background-color: var(--yellow);
+  width: 6.5em;
+  height: 5em;
+  border-radius:50% ;
+  margin: 1.5em;
+  color: var(--green);
+}
+
+.circle-text{
+  margin: 0;
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.circle span{
+  font-size: .9rem;
+  font-weight: bolder;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+}
+
+.all-circles{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-flex;
+}
+
+
+
+
+
