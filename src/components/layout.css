@@ -8,8 +8,6 @@
   --green: #005346;
   --yellow: #FACB05;
 }
-
-
 /*   header    */
 
 .header{
@@ -19,39 +17,44 @@
   justify-content: space-between;
 }
 
-.main{
-
+.header-menu{
+  margin-right: 3em;
 }
 
 
 .ricola-logo{
-  width: 6em;
-  height: 5em;
+  width: 6.1em;
+  height: 4em;
+  margin-left: 3em;
 }
 
 .main-bg{
-  background-image: url('../images/farmer.png');
+  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 
 .circle{
-  font-size: .8rem;
+  font-size: .7rem;
   background-color: var(--yellow);
-  width: 6.5em;
-  height: 5em;
+  width: 6.8em;
+  height: 5.5em;
   border-radius:50% ;
   margin: 1.5em;
   color: var(--green);
+}
+
+.circle:hover{
+  cursor: pointer;
+  background-color: var(--green);
+  color: white;
 }
 
 .circle-text{
