@@ -2,15 +2,15 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import Layout from "../components/layout"
+
 import SEO from "../components/seo"
 
 import Header from '../components/header'
-import Farmer from '../images/main-bg.jpg'
+import Farmer from '../images/nature-one.jpg'
 
 
-import Test from '../images/farmer.png'
-import Nature from '../components/nature'
+import Nature from '../images/nature.jpg'
+
 
 const IndexPage = () => {
 
@@ -21,21 +21,29 @@ const IndexPage = () => {
 
   const buttons = [nature, people, business, ricola]
 
+  const main = document.querySelector('.main-bg')
 
-  function changeBackground(e){
-    e.target.style.background = { backgroundImage: `url(${Test})` }
+
+  function mainBackground(){
+    main.style.backgroundImage = `url(${Nature})` 
+    main.style.transition = "all 1s ease-in-out";
+  }
+
+  function changeBackground(){
+    main.style.backgroundImage = `url(${Farmer})` 
+    main.style.transition = "all 1s ease-in-out";
   }
   
 
   return(
 
     <div className='main'>
-      <div className='main-bg'  style={{ backgroundImage: `url(${Farmer})` }}>
+      <div className='main-bg'  style={{ backgroundImage: `url(${Nature})` }}>
         <Header/>
         <div className='all-circles'>
 
           <Link>
-            <div className='circle ' id='nature' onMouseOver={changeBackground}>
+            <div className='circle ' id='nature' onMouseOver={changeBackground} onMouseLeave={mainBackground}>
               <div className='circle-text'>
                 <span>N</span>
                 <br></br>

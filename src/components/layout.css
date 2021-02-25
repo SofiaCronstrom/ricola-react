@@ -29,7 +29,6 @@
 }
 
 .main-bg{
-  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,4 +81,22 @@
 
 
 
+@media only screen and (max-width: 600px)  {
+  .circle{
+    font-size: .6rem;
+    width: 6.8em;
+    height: 5.5em;
+  }
+
+  .header-menu{
+    margin-right: 1em;
+    
+  }
+  
+  .ricola-logo{
+    margin-left: 1em;
+    width: 4.5em;
+    height: 4em;
+  }
+}
 
