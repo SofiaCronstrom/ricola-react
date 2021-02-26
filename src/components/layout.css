@@ -7,8 +7,13 @@
 :root{
   --green: #005346;
   --yellow: #FACB05;
+  --lightYellow: #E5E7E6;
 }
 /*   header    */
+
+a{
+  text-decoration: none;
+}
 
 .header{
   background-color: white;
@@ -100,3 +105,58 @@
   }
 }
 
+
+
+/* Sub-pages  */
+
+.yellow-button{
+  font-size: .7rem;
+  background-color: var(--yellow);
+  width: 6.8em;
+  height: 5.5em;
+  border-radius:50% ;
+  color: var(--green);
+}
+
+.yellow-button span{
+  font-size: .9rem;
+  font-weight: bolder;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+}
+
+.yellow-button:hover{
+  cursor: pointer;
+  background-color: var(--green);
+  color: white;
+}
+
+.circle-subpage{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, );
+  text-align: center;
+  display: inline-flex;
+  margin-left: 3em;
+}
+
+
+.modal{
+  width: 274px;
+  height: 327px;
+  color: #243F36;
+  background-color: #ffffff; 
+  border: 2px solid var(--yellow);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  outline: none;
+}
+
+
+.close-modal{
+    border: none;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}

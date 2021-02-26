@@ -1,48 +1,49 @@
-
+import Ricola from '../images/ricola.jpg'
 import { Link } from "gatsby"
 import React from "react"
 
-
-import SEO from "../components/seo"
-
 import Header from '../components/header'
 import Farmer from '../images/nature-one.jpg'
-
-
-import Nature from '../images/nature.jpg'
+import People from '../images/people.jpg'
+import Business from '../images/business.jpg'
+import Main from '../images/nature.jpg'
 
 
 const IndexPage = () => {
 
-  const nature = document.getElementById("nature")
-  const people= document.getElementById("nature")
-  const business = document.getElementById("nature")
-  const ricola = document.getElementById("nature")
-
-  const buttons = [nature, people, business, ricola]
-
-  const main = document.querySelector('.main-bg')
-
-
   function mainBackground(){
-    main.style.backgroundImage = `url(${Nature})` 
-    main.style.transition = "all 1s ease-in-out";
+    document.querySelector('.main-bg').style.backgroundImage = `url(${Main})` 
+    document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
   }
 
   function changeBackground(){
-    main.style.backgroundImage = `url(${Farmer})` 
-    main.style.transition = "all 1s ease-in-out";
+    document.querySelector('.main-bg').style.backgroundImage = `url(${Farmer})` 
+    document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
   }
-  
+
+  function changeBackgroundPeople(){
+    document.querySelector('.main-bg').style.backgroundImage = `url(${People})` 
+    document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+  }
+
+  function changeBackgroundBusiness(){
+    document.querySelector('.main-bg').style.backgroundImage = `url(${Business})` 
+    document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+  }
+
+  function changeBackgroundRicola(){
+    document.querySelector('.main-bg').style.backgroundImage = `url(${Ricola})` 
+    document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+  }
 
   return(
 
     <div className='main'>
-      <div className='main-bg'  style={{ backgroundImage: `url(${Nature})` }}>
+      <div className='main-bg'  style={{ backgroundImage: `url(${Main})` }}>
         <Header/>
         <div className='all-circles'>
 
-          <Link>
+          <Link to='/nature'>
             <div className='circle ' id='nature' onMouseOver={changeBackground} onMouseLeave={mainBackground}>
               <div className='circle-text'>
                 <span>N</span>
@@ -52,8 +53,8 @@ const IndexPage = () => {
             </div>
           </Link>
 
-          <Link>
-            <div className='circle' id='people'>
+          <Link to='/people'>
+            <div className='circle' id='people' onMouseOver={changeBackgroundPeople} onMouseLeave={mainBackground}>
               <div className='circle-text' >
                 <span>P</span>
                 <br></br>
@@ -62,8 +63,8 @@ const IndexPage = () => {
             </div>
           </Link>
     
-          <Link>
-            <div className='circle' id='business'>
+          <Link to='/business'>
+            <div className='circle' id='business' onMouseOver={changeBackgroundBusiness} onMouseLeave={mainBackground}>
               <div className='circle-text'>
                 <span>B</span>
                 <br></br>
@@ -72,8 +73,8 @@ const IndexPage = () => {
             </div>
           </Link>
 
-          <Link>
-            <div className='circle' id='ricola'>
+          <Link to='/ricola'>
+            <div className='circle' id='ricola' onMouseOver={changeBackgroundRicola} onMouseLeave={mainBackground}>
               <div className='circle-text'>
                 <span>R</span>
                 <br></br>

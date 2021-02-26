@@ -8,7 +8,7 @@ const Header = () => (
   <header>
 
     <div className='header'>
-      <Link className='header-logo'>
+      <Link className='header-logo' to='http://localhost:8000'>
         <img className='ricola-logo' src={Logo}/>
       </Link>
 
