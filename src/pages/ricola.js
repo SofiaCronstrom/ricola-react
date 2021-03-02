@@ -2,6 +2,7 @@ import React from "react"
 
 import Header from '../components/header'
 import RicolaImg from '../images/ricola.jpg'
+import Modalricola from '../components/modalricola'
 
 const Ricola = () => {
 
@@ -17,6 +18,14 @@ const Ricola = () => {
                             <br></br>
                             Ricola
                         </div>
+                    </div>
+
+                    
+                    <div className='modal-main'>
+                        <Modalricola />
+                        <Modalricola/>
+                        <Modalricola/>
+                        <Modalricola/>
                     </div>
                 </div>
             </div>

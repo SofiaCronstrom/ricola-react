@@ -116,6 +116,7 @@ a{
   height: 5.5em;
   border-radius:50% ;
   color: var(--green);
+  margin-right: 10em;
 }
 
 .yellow-button span{
@@ -132,6 +133,7 @@ a{
 }
 
 .circle-subpage{
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 0%;
@@ -142,7 +144,9 @@ a{
 }
 
 
+
 .modal{
+  
   width: 274px;
   height: 327px;
   color: #243F36;
@@ -153,10 +157,58 @@ a{
   outline: none;
 }
 
+.modal-main{
+  width: 80%;
+  text-align: center;
+  
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.open-modal{
+  transform: translateY(100%);
+  border: none;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  background-color: #ffffff; 
+}/*white circles*/
+
 
 .close-modal{
     border: none;
     border-radius: 50%;
     width: 3em;
     height: 3em;
+}
+
+
+path {
+  stroke: white;
+  stroke-width: 2;
+}
+
+.leaf {
+
+  width: 7em;
+  height: 5.5em;
+  margin: 1em;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.overlay{
+  background-color: none;
 }
