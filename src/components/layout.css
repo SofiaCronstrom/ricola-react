@@ -116,6 +116,7 @@ a{
   height: 5.5em;
   border-radius:50% ;
   color: var(--green);
+  margin-right: 3em;
 }
 
 .yellow-button span{
@@ -143,7 +144,7 @@ a{
 }
 
 .line{
-  width: 20em;
+  width: 22em;
   margin-right: 1em;
   margin-left: 1em;
 }
@@ -163,7 +164,7 @@ a{
 .modal-main{
   width: 80%;
   text-align: center;
-  display: flex;
+  display: inline-flex;
   
 }
 
@@ -174,17 +175,33 @@ a{
   width: 2em;
   height: 2em;
   background-color: #ffffff; 
+  cursor: pointer;
+ 
 }/*white circles*/
 
+.open-modal:hover { 
+  box-shadow: 0px 6px 19px 16px rgba(239, 242, 245, 0.399);
+}
 
+.header-modal{
+  display: flex;
+  padding: 10px;
+ text-align: center;
+}
 
-
+h4{
+  padding-left: 10px;
+  color: var(--green);
+}
 
 .close-modal{
     border: none;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -194,13 +211,14 @@ path {
 }
 
 .leaf {
-  
+  display: none;
   width: 7em;
   height: 5.5em;
   margin: 1em;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s linear alternate infinite;
+  transform: translate(400%,100%);
 }
 
 
@@ -218,22 +236,52 @@ path {
 }
 
 
+
 .modal-first ,.modal-second ,.modal-third{
-  width: 374px;
-  height: 250px;
+  width: 300px;
+  height: 145px;
   color: #243F36;
   background-color: var(--yellow); 
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-  outline: none;
-  transform: translate(80%,30%);
+  outline: none;  
+}
+
+.modal-first{
+  transform: translate(100%,70%);
 }
 
 .modal-second{
-
+transform: translate(285%, 60%)
 }
 
 
 .modal-third{
+  transform: translate(350%, 260%)
+}
 
+
+.sun{
+  width: 10rem;
+}
+
+.sun img  {
+  
+  width: 7em;
+  height: 5.5em;
+  margin: 1em;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+
+}
+
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }

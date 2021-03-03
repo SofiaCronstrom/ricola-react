@@ -8,19 +8,24 @@ import Leaf from '../components/leaf'
 const ModalOne = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
-
-    for(let i = 0; i < document.querySelectorAll('.modal').length; i += 2){
-      document.querySelectorAll('.modal')[i].style.backgroundColor = 'green';
-
-   
     
+    function changeAnimation(){
+      document.querySelector('.leaf').style.display = 'block' 
+      document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
     }
+
+    function removeAnimation(){
+      document.querySelector('.leaf').style.display = 'none' 
+      document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
+    }
+
+    //{props.children}
       
     return(
         
         <div>
       
-      <button className='open-modal' onClick={()=> setmodalIsOpen(true)}></button>
+      <button className='open-modal' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation}></button>
      
       
       <Modal isOpen={modalIsOpen}
@@ -37,14 +42,15 @@ const ModalOne = (props) => {
       }
       >
 
-      <div>
-        <button className='close-modal' onClick={() => setmodalIsOpen(false) }>Close</button>
+      <div className='header-modal'>
+        <button className='close-modal' onClick={() => setmodalIsOpen(false) }>X</button>
+        <h4>{props.title}</h4>
       </div>
-  
-        {props.children}
 
-          <h2>{props.title}</h2>
-          <h2>dddd</h2>
+      
+
+      
+          
           <div className="App">
       <Accordion
         title="What is your return policy?"
@@ -60,8 +66,7 @@ const ModalOne = (props) => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     
         "
       />
     </div>

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 
 import Header from '../components/header'
 import Farmer from '../images/nature-one.jpg'
@@ -7,12 +7,12 @@ import Farmer from '../images/nature-one.jpg'
 import Leaf from '../components/leaf'
 
 import ModalOne from '../components/modalnature'
-import Modalricola from '../components/modalricola'
-import Modalbusiness from '../components/modalbusiness'
-import Modalpeople from '../components/modalpeople'
-import ModalPeople from '../components/modalpeople'
 
-import Line from '../images/line1.svg'
+import Line1 from '../images/line1.svg'
+import Line2 from '../images/line2.svg'
+import Line3 from '../images/line3.svg'
+
+
 
 const Nature = () => {
  
@@ -25,12 +25,16 @@ for(let i = 0; i < document.querySelectorAll('.modal').length; i += 2){
         <div>
           
           
-
+         
             <div className='main-bg' style={{ backgroundImage: `url(${Farmer})` }}>
+            
             <Header/>
-       
-            <Leaf/>
 
+            <Leaf/>
+         
+        
+           
+            
                 <div className='circle-subpage'>
                    
                     <div className='yellow-button' id='business' >
@@ -44,13 +48,15 @@ for(let i = 0; i < document.querySelectorAll('.modal').length; i += 2){
                  
                    
                     <div className='modal-main'>
-                    <img src={Line} className='line' />
+                    
+                    <img src={Line1} className='line' alt='line one' />
+                 
                      <ModalOne title='nature' cssClass='modal-first'/>
-                     <img src={Line} className='line'/>
+                     <img src={Line2} className='line two'/>
                      <ModalOne title='ricola' cssClass='modal-second' >
                        <h3>h3</h3>
                      </ModalOne>
-                     <img src={Line} className='line'/>
+                     <img src={Line3} className='line three'/>
                      <ModalOne title='new' cssClass='modal-third'/>
                     
                     </div>
