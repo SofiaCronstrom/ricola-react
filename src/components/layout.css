@@ -116,7 +116,6 @@ a{
   height: 5.5em;
   border-radius:50% ;
   color: var(--green);
-  margin-right: 10em;
 }
 
 .yellow-button span{
@@ -143,15 +142,19 @@ a{
   margin-left: 3em;
 }
 
-
+.line{
+  width: 20em;
+  margin-right: 1em;
+  margin-left: 1em;
+}
 
 .modal{
   
-  width: 274px;
-  height: 327px;
+  width: 374px;
+  height: 250px;
   color: #243F36;
   background-color: #ffffff; 
-  border: 2px solid var(--yellow);
+ border: 2px solid var(--yellow);;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   outline: none;
@@ -160,9 +163,7 @@ a{
 .modal-main{
   width: 80%;
   text-align: center;
-  
   display: flex;
-  justify-content: space-between;
   
 }
 
@@ -174,6 +175,9 @@ a{
   height: 2em;
   background-color: #ffffff; 
 }/*white circles*/
+
+
+
 
 
 .close-modal{
@@ -190,7 +194,7 @@ path {
 }
 
 .leaf {
-
+  
   width: 7em;
   height: 5.5em;
   margin: 1em;
@@ -211,4 +215,25 @@ path {
 
 .overlay{
   background-color: none;
+}
+
+
+.modal-first ,.modal-second ,.modal-third{
+  width: 374px;
+  height: 250px;
+  color: #243F36;
+  background-color: var(--yellow); 
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  outline: none;
+  transform: translate(80%,30%);
+}
+
+.modal-second{
+
+}
+
+
+.modal-third{
+
 }

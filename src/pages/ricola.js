@@ -22,7 +22,7 @@ const Ricola = () => {
 
                     
                     <div className='modal-main'>
-                        <Modalricola />
+                        <Modalricola/>
                         <Modalricola/>
                         <Modalricola/>
                         <Modalricola/>

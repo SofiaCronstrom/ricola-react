@@ -1,22 +1,33 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Accordion from '../components/popup'
 import Modal from 'react-modal'
 
-const ModalOne = () => {
+import Leaf from '../components/leaf'
+
+const ModalOne = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
 
+    for(let i = 0; i < document.querySelectorAll('.modal').length; i += 2){
+      document.querySelectorAll('.modal')[i].style.backgroundColor = 'green';
+
+   
+    
+    }
       
     return(
-
+        
         <div>
-
+      
       <button className='open-modal' onClick={()=> setmodalIsOpen(true)}></button>
+     
+      
       <Modal isOpen={modalIsOpen}
       onRequestClose={() => setmodalIsOpen(false)}
     
-      className='modal'
+      className={props.cssClass}
+      
       style={
         {
           overlay : {
@@ -30,7 +41,9 @@ const ModalOne = () => {
         <button className='close-modal' onClick={() => setmodalIsOpen(false) }>Close</button>
       </div>
   
-          <h2>ddhhhdd</h2>
+        {props.children}
+
+          <h2>{props.title}</h2>
           <h2>dddd</h2>
           <div className="App">
       <Accordion
