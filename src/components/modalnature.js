@@ -4,28 +4,36 @@ import Accordion from '../components/popup'
 import Modal from 'react-modal'
 
 import Leaf from '../components/leaf'
+import { doc } from 'prettier'
 
 const ModalOne = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
-    
+
+    const modal1 = document.querySelector('.modal-first')
+
     function changeAnimation(){
+      
       document.querySelector('.leaf').style.display = 'block' 
       document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
+    
     }
 
     function removeAnimation(){
       document.querySelector('.leaf').style.display = 'none' 
       document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
+      
     }
 
+;
+    
     //{props.children}
       
     return(
         
         <div>
       
-      <button className='open-modal' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation}></button>
+      <button className='open-modal' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
      
       
       <Modal isOpen={modalIsOpen}
@@ -43,18 +51,16 @@ const ModalOne = (props) => {
       >
 
       <div className='header-modal'>
-        <button className='close-modal' onClick={() => setmodalIsOpen(false) }>X</button>
+        <button className='close-modal' onClick={() => setmodalIsOpen(false) }>-</button>
         <h4>{props.title}</h4>
       </div>
 
-      
-
-      
           
           <div className="App">
       <Accordion
         title="What is your return policy?"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        
       />
       <Accordion
         title="How do I track my order?"

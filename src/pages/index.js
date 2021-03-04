@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import Header from '../components/header'
-import Farmer from '../images/nature-one.jpg'
+import Farmer from '../images/nature1.jpg'
 import People from '../images/people.jpg'
 import Business from '../images/business.jpg'
 import Main from '../images/nature.jpg'

@@ -150,23 +150,17 @@ a{
 }
 
 .modal{
-  
   width: 374px;
   height: 250px;
   color: #243F36;
   background-color: #ffffff; 
- border: 2px solid var(--yellow);;
+  border: 2px solid var(--yellow);;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   outline: none;
 }
 
-.modal-main{
-  width: 80%;
-  text-align: center;
-  display: inline-flex;
-  
-}
+
 
 .open-modal{
   transform: translateY(100%);
@@ -176,7 +170,6 @@ a{
   height: 2em;
   background-color: #ffffff; 
   cursor: pointer;
- 
 }/*white circles*/
 
 .open-modal:hover { 
@@ -187,6 +180,7 @@ a{
   display: flex;
   padding: 10px;
  text-align: center;
+ 
 }
 
 h4{
@@ -199,9 +193,11 @@ h4{
     border-radius: 50%;
     width: 2em;
     height: 2em;
-    background-color: var(--green);
-    color: white;
+    background-color: var(--yellow);
+    color: var(--green);
     cursor: pointer;
+    border: 1.5px solid var(--green);
+    font-weight: 900;
 }
 
 
@@ -211,6 +207,17 @@ path {
 }
 
 .leaf {
+  display: none;
+  width: 7em;
+  height: 5.5em;
+  margin: 1em;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+  transform: translate(400%,100%);
+}
+
+.svg2 {
   display: none;
   width: 7em;
   height: 5.5em;
@@ -235,29 +242,51 @@ path {
   background-color: none;
 }
 
+.modal-main{
+  width: 80%;
+  text-align: center;
+  display: inline-flex;
+}
 
 
 .modal-first ,.modal-second ,.modal-third{
-  width: 300px;
-  height: 145px;
+  width: 360px;
+  height: 42px;
   color: #243F36;
   background-color: var(--yellow); 
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-  outline: none;  
+  outline: none; 
+  filter: drop-shadow(0px 7.2px 7.2px rgba(0, 0, 0, 0.25));
+  
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+  
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .modal-first{
-  transform: translate(100%,70%);
+  transform: translate(80%, 260%);
 }
 
 .modal-second{
-transform: translate(285%, 60%)
+ transform: translate(200%, 180%);
 }
 
 
 .modal-third{
-  transform: translate(350%, 260%)
+  transform: translate(280%, 540%);
 }
 
 
@@ -285,3 +314,26 @@ transform: translate(285%, 60%)
     stroke-dashoffset: 0;
   }
 }
+
+
+.arrow{
+  width: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+  
+}
+
+
+
+.next-container{
+  text-align: center;
+  align-items: center;
+}
+
+.next-center{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
