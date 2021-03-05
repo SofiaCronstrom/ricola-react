@@ -1,32 +1,64 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Accordion from './popup'
 import Modal from 'react-modal'
 
-const ModalBusiness = () => {
+
+
+const ModalThree = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
 
-    return(
+    const modal1 = document.querySelector('.modal-first')
 
+    function changeAnimation(){
+      
+      document.querySelector('.svg3').style.visibility = 'visible';
+    
+    }
+
+    function removeAnimation(){
+      document.querySelector('.svg3').style.visibility = "hidden";
+   
+    }
+
+;
+    
+    //{props.children}
+      
+    return(
+        
         <div>
 
-      <button className='open-modal' onClick={()=> setmodalIsOpen(true)}></button>
+      
+      <button className='open-modal one' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
+
+      
       <Modal isOpen={modalIsOpen}
       onRequestClose={() => setmodalIsOpen(false)}
-      className='modal'
+      className={props.cssClass}
+      
+      
+      style={
+        {
+          overlay : {
+            backgroundColor: 'rgba(255, 255, 255, 0)'
+          }
+        }
+      }
       >
 
-      <div>
-        <button className='close-modal' onClick={() => setmodalIsOpen(false) }>Close</button>
+      <div className='header-modal'>
+        <button className='close-modal' onClick={() => setmodalIsOpen(false) }>-</button>
+    
       </div>
-  
-          <h2>ddhhhdd</h2>
-          <h2>dddd</h2>
+
+          
           <div className="App">
       <Accordion
         title="What is your return policy?"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        
       />
       <Accordion
         title="How do I track my order?"
@@ -38,8 +70,7 @@ const ModalBusiness = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     
         "
       />
     </div>
@@ -53,4 +84,4 @@ const ModalBusiness = () => {
 
 
 
-export default ModalBusiness
+export default ModalThree

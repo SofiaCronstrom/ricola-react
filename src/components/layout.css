@@ -28,8 +28,7 @@ a{
 
 
 .ricola-logo{
-  width: 6.1em;
-  height: 4em;
+height: 1.8em;
   margin-left: 3em;
 }
 
@@ -39,7 +38,7 @@ a{
   background-size: cover;
   position: relative;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -166,19 +165,26 @@ a{
   transform: translateY(100%);
   border: none;
   border-radius: 50%;
-  width: 2em;
-  height: 2em;
+  width: 22px;
+  height: 22px;
   background-color: #ffffff; 
   cursor: pointer;
 }/*white circles*/
 
 .open-modal:hover { 
+  outline: none;
+  border: none;
   box-shadow: 0px 6px 19px 16px rgba(239, 242, 245, 0.399);
 }
 
+
+button:active {
+  outline: none;
+  border: none;
+}
 .header-modal{
   display: flex;
-  padding: 10px;
+  padding: 8.5px;
  text-align: center;
  
 }
@@ -191,8 +197,8 @@ h4{
 .close-modal{
     border: none;
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 25px;
+    height: 25px;
     background-color: var(--yellow);
     color: var(--green);
     cursor: pointer;
@@ -206,26 +212,46 @@ path {
   stroke-width: 2;
 }
 
+.svg-animations{
+ 
+  text-align: center;
+  display: inline-flex;
+  width: 60%;
+  position: absolute;
+  top: 28%;
+  left: 35%;
+  justify-content: space-between;
+  transform: translate(-50%, );
+  text-align: center;
+  display: inline-flex;
+
+}
+
+
 .leaf {
-  display: none;
-  width: 7em;
-  height: 5.5em;
-  margin: 1em;
+  width: 100px;
+
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s linear alternate infinite;
-  transform: translate(400%,100%);
+  
 }
 
 .svg2 {
-  display: none;
-  width: 7em;
-  height: 5.5em;
-  margin: 1em;
+  width: 100px;
+ 
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
-  transform: translate(400%,100%);
+  animation: dash 4s linear alternate infinite;
+
+}
+
+.svg3 {
+  width: 100px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 4s linear alternate infinite;
+
 }
 
 
@@ -286,9 +312,13 @@ path {
 
 
 .modal-third{
-  transform: translate(280%, 540%);
+  transform: translate(280%, 300%);
 }
 
+
+.buttonOne div div .one {
+  display: none;
+}
 
 .sun{
   width: 10rem;
@@ -317,17 +347,19 @@ path {
 
 
 .arrow{
-  width: 3em;
+  width: 1.5em;
   margin-left: 1em;
   margin-right: 1em;
-  
+ 
 }
 
-
-
 .next-container{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  align-items: center;
+  display: inline-flex;
 }
 
 .next-center{
@@ -337,3 +369,76 @@ path {
   
 }
 
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-family: 'Roboto', sans-serif;
+  color: #243F36; 
+  
+}
+.h3-sidebar{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: #243F36; 
+  padding: 20px;
+}
+
+.image{
+ float: left;
+ margin: 20px;
+ width: 212px;
+ height: 245px;
+ background-color: yellow;
+}
+
+.sidebar-text{
+  padding: 20px;
+  font-size: 0.85em;
+  text-align: left;
+  
+}
+.closeButton{
+  border: none;
+  background-color: white;
+  color: #434343;
+  font-size: 2em;
+  display: flex;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+.openButton{
+  transform: translateY(100%);
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff; 
+  cursor: pointer;
+}/*white circles*/
+
+.openButton:hover { 
+  outline: none;
+  border: none;
+  box-shadow: 0px 6px 19px 16px rgba(239, 242, 245, 0.399);
+}
+
+
+h1{
+  color: white; 
+  margin-top: 6em;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 200;
+}
+
+h1 span{
+  font-weight: bold;
+}

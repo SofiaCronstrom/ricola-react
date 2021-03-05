@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import Logo from "../images/greenLogo.svg"
+import Logo from "../images/ricola-logo.png"
 import React from "react"
 import Menu from "../images/burger.svg"
 

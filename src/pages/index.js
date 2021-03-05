@@ -41,8 +41,10 @@ const IndexPage = () => {
     <div className='main'>
       <div className='main-bg'  style={{ backgroundImage: `url(${Main})` }}>
         <Header/>
+            <h1>
+                Explore our <span className='span'>footsteps  employee initiatives</span> in the map bellow
+            </h1>
         <div className='all-circles'>
-
           <Link to='/nature'>
             <div className='circle ' id='nature' onMouseOver={changeBackground} onMouseLeave={mainBackground}>
               <div className='circle-text'>

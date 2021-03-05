@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../components/header'
 import BusinessImg from '../images/business.jpg'
-import Modalbusiness from '../components/modalbusiness'
+
 const Business = () => {
 
     return(
@@ -20,10 +20,7 @@ const Business = () => {
                     </div>
 
                     <div className='modal-main'>
-                        <Modalbusiness/>
-                        <Modalbusiness/>
-                        <Modalbusiness/>
-                        <Modalbusiness/>
+                      
                     </div>
 
                 </div>

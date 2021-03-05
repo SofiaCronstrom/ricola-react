@@ -6,13 +6,20 @@ import Farmer from '../images/nature1.jpg'
 
 import Leaf from '../components/leaf'
 import Svg2 from '../components/svg2'
+import Svg3 from '../components/svg3'
 
 import ModalOne from '../components/modalnature'
+import ModalTwo from '../components/modalTwo'
+import ModalThree from '../components/modalThree'
+
 import NextPage from '../components/nextpage'
 
 import Line1 from '../images/line1.svg'
 import Line2 from '../images/line2.svg'
 import Line3 from '../images/line3.svg'
+
+import Sidebar from '../components/sidebar'
+
 
 
 
@@ -39,8 +46,15 @@ function changeAnimation(){
             
             <Header/>
 
-            <Leaf/>
-            <Svg2/>
+            <div className='svg-animations'>
+                <Leaf/>
+                <Svg2/>
+                <Svg3/>
+            </div>
+            
+
+
+            <Sidebar/>
          
                 <div className='circle-subpage'>
                    
@@ -58,18 +72,19 @@ function changeAnimation(){
                  
                      <ModalOne title='nature' cssClass='modal-first' changeAnimation='changeAnimation()'/>
                      <img src={Line2} className='line two'/>
-                     <ModalOne title='ricola' cssClass='modal-second' >
+                     <ModalTwo title='ricola' cssClass='modal-second' >
                        <h3>h3</h3>
-                     </ModalOne>
+                     </ModalTwo>
                      <img src={Line3} className='line three'/>
-                     <ModalOne title='new' cssClass='modal-third'/>
+                     <ModalThree title='new' cssClass='modal-third'/>
                     
                     </div>
                 </div>
 
                 
+                <NextPage link='/people' link2='http://localhost:8000'/>
             </div>
-            <NextPage link='/people' link2='http://localhost:8000'/>
+            
         </div>
     )
 }

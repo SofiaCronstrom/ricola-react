@@ -14,15 +14,12 @@ const ModalOne = (props) => {
 
     function changeAnimation(){
       
-      document.querySelector('.leaf').style.display = 'block' 
-      document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
-    
+      document.querySelector('.leaf').style.visibility = 'visible';
     }
 
     function removeAnimation(){
-      document.querySelector('.leaf').style.display = 'none' 
-      document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
-      
+      document.querySelector('.leaf').style.visibility = "hidden";
+  
     }
 
 ;
@@ -32,9 +29,10 @@ const ModalOne = (props) => {
     return(
         
         <div>
+
       
-      <button className='open-modal' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
-     
+      <button className='open-modal one' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
+
       
       <Modal isOpen={modalIsOpen}
       onRequestClose={() => setmodalIsOpen(false)}
