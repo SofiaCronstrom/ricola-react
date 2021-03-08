@@ -6,6 +6,8 @@ import Modal from 'react-modal'
 import Leaf from '../components/leaf'
 import { doc } from 'prettier'
 
+import Sidebar from '../components/sidebar'
+
 const ModalOne = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
@@ -21,8 +23,17 @@ const ModalOne = (props) => {
       document.querySelector('.leaf').style.visibility = "hidden";
   
     }
+    function viewButton(){
+      
+      document.querySelector('.openButton').style.visibility = 'visible';
+    
+    }
 
-;
+    function viewLine(){
+      
+      document.querySelector('.dottedLine1').style.visibility = 'visible';
+    
+    }
     
     //{props.children}
       
@@ -31,7 +42,13 @@ const ModalOne = (props) => {
         <div>
 
       
-      <button className='open-modal one' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
+      <button className='open-modal one' onClick={()=> {setmodalIsOpen(true) 
+      viewButton()
+      viewLine()
+    }
+      
+      
+      } onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
 
       
       <Modal isOpen={modalIsOpen}
@@ -76,6 +93,8 @@ const ModalOne = (props) => {
     </div>
       
       </Modal>
+
+      
     
   
         </div>

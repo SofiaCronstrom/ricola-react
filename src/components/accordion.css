@@ -31,7 +31,7 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover,
 .active {
-  background-color: rgb(164, 164, 164);
+  background-color: rgba(164, 164, 164, 0.678);
 }
 
 /* Style the accordion content title */
@@ -55,7 +55,9 @@
 
 /* Style the accordion content panel. Note: hidden by default */
 .accordion__content {
-  background-color: white;
+  background-color: rgba(29, 67, 32, 0.15);  
+  backdrop-filter: blur(7px);
+  color: white;
   overflow: auto;
   transition: max-height 0.6s ease;
 }
@@ -65,6 +67,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
+ 
   padding: 18px;
 }
 

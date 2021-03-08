@@ -42,6 +42,13 @@ height: 1.8em;
   overflow: hidden;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+
+   
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 
 .circle{
@@ -140,6 +147,7 @@ height: 1.8em;
   text-align: center;
   display: inline-flex;
   margin-left: 3em;
+  margin-right: 3em;
 }
 
 .line{
@@ -219,7 +227,7 @@ path {
   width: 60%;
   position: absolute;
   top: 28%;
-  left: 35%;
+  left: 34%;
   justify-content: space-between;
   transform: translate(-50%, );
   text-align: center;
@@ -229,17 +237,18 @@ path {
 
 
 .leaf {
+  
+  visibility: hidden;
   width: 100px;
-
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
+  animation: dash 4s linear alternate infinite;
   
 }
 
 .svg2 {
+  visibility: hidden;
   width: 100px;
- 
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 4s linear alternate infinite;
@@ -247,6 +256,7 @@ path {
 }
 
 .svg3 {
+  visibility: hidden;
   width: 100px;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -269,9 +279,10 @@ path {
 }
 
 .modal-main{
-  width: 80%;
+  width: 88%;
   text-align: center;
   display: inline-flex;
+ 
 }
 
 
@@ -348,16 +359,14 @@ path {
 
 .arrow{
   width: 1.5em;
-  margin-left: 1em;
-  margin-right: 1em;
+
  
 }
 
 .next-container{
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(50%);
+ margin-left: 3em;
+ margin-right: 3em;
   text-align: center;
   display: inline-flex;
 }
@@ -373,14 +382,15 @@ path {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   right: 0;
-  background-color: #ffffff;
+  background-color: white;
+
   overflow-x: hidden;
   transition: 0.5s;
   font-family: 'Roboto', sans-serif;
-  color: #243F36; 
+  color: #c6c6c6; 
   
 }
 .h3-sidebar{
@@ -398,12 +408,6 @@ path {
  background-color: yellow;
 }
 
-.sidebar-text{
-  padding: 20px;
-  font-size: 0.85em;
-  text-align: left;
-  
-}
 .closeButton{
   border: none;
   background-color: white;
@@ -415,6 +419,14 @@ path {
 }
 
 .openButton{
+  position: absolute;
+  top: 80%;
+  left: 42%;
+  transform: translate(-50%, );
+  text-align: center;
+  display: inline-flex;
+
+  visibility: hidden;
   transform: translateY(100%);
   border: none;
   border-radius: 50%;
@@ -432,8 +444,9 @@ path {
 
 
 h1{
+  font-size: 1.6rem;
   color: white; 
-  margin-top: 6em;
+  margin-top: 7em;
   margin-left: auto;
   margin-right: auto;
   font-weight: 200;
@@ -441,4 +454,24 @@ h1{
 
 h1 span{
   font-weight: bold;
+}
+
+
+.sidebar-p{
+  text-align: left;
+  font-size: .9rem;
+  padding: 1em;
+  line-height: 1.5;
+  
+}
+
+.dottedLine1{
+  position: absolute;
+  top: 58%;
+  left: 36%;
+  transform: translate(-50%, );
+  text-align: center;
+  display: inline-flex;
+  visibility: hidden;
+  width: 100px;
 }

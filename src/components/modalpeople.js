@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react'
-import Accordion from './popup'
+import Accordion from '../components/popup'
 import Modal from 'react-modal'
 
 
 
-const ModalTwo = (props) => {
+const ModalFour = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
 
@@ -13,20 +13,19 @@ const ModalTwo = (props) => {
 
     function changeAnimation(){
       
-      document.querySelector('.svg2').style.visibility = 'visible';
-    
+      document.querySelector('.leaf').style.visibility = 'visible';
+      document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
     
     }
 
     function removeAnimation(){
-      document.querySelector('.svg2').style.visibility = "hidden";
+      document.querySelector('.leaf').style.visibility = "hidden";
+      document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
+      
+    }
+
+;
     
-    };
-
-
-    
-
-    //openButton
     //{props.children}
       
     return(
@@ -39,7 +38,7 @@ const ModalTwo = (props) => {
       
       <Modal isOpen={modalIsOpen}
       onRequestClose={() => setmodalIsOpen(false)}
-      className={props.cssClass}
+    
       
       
       style={
@@ -53,7 +52,7 @@ const ModalTwo = (props) => {
 
       <div className='header-modal'>
         <button className='close-modal' onClick={() => setmodalIsOpen(false) }>-</button>
-        <h4>{props.title}</h4>
+    
       </div>
 
           
@@ -87,4 +86,4 @@ const ModalTwo = (props) => {
 
 
 
-export default ModalTwo
+export default ModalFour

@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from "gatsby"
 
 import Header from '../components/header'
 import Farmer from '../images/nature1.jpg'
@@ -18,17 +19,12 @@ import Line1 from '../images/line1.svg'
 import Line2 from '../images/line2.svg'
 import Line3 from '../images/line3.svg'
 
+import DottedLine1 from '../images/dottedLine1.svg'
+
 import Sidebar from '../components/sidebar'
-
-
-
 
 const Nature = () => {
  
-for(let i = 0; i < document.querySelectorAll('.modal').length; i += 2){
-  document.querySelectorAll('.modal')[i].style.backgroundColor = 'red';
-
-}
 
 function changeAnimation(){
       
@@ -39,9 +35,7 @@ function changeAnimation(){
     return(
 
         <div>
-          
-          
-         
+
             <div className='main-bg' style={{ backgroundImage: `url(${Farmer})` }}>
             
             <Header/>
@@ -52,10 +46,6 @@ function changeAnimation(){
                 <Svg3/>
             </div>
             
-
-
-            <Sidebar/>
-         
                 <div className='circle-subpage'>
                    
                     <div className='yellow-button' id='business' >
@@ -77,14 +67,16 @@ function changeAnimation(){
                      </ModalTwo>
                      <img src={Line3} className='line three'/>
                      <ModalThree title='new' cssClass='modal-third'/>
-                    
+                     <NextPage link='/people' link2='http://localhost:8000'/>
                     </div>
-                </div>
 
-                
-                <NextPage link='/people' link2='http://localhost:8000'/>
-            </div>
+                    
+                </div>
+                <img className='dottedLine1' src={DottedLine1}/>
+                <Sidebar/>
             
+            </div>
+
         </div>
     )
 }
