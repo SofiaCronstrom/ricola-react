@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react'
 import Accordion from './popup'
 import Modal from 'react-modal'
 
-
+import One from '../images/goals/10.png'
+import Three from '../images/goals/16.png'
+import Twelve from '../images/goals/8.png'
 
 const ModalThree = (props) => {
 
@@ -22,7 +24,17 @@ const ModalThree = (props) => {
    
     }
 
-;
+    function viewButton(){
+      
+      document.getElementById('sideThree').style.visibility = 'visible';
+    
+    }
+
+    function viewLine(){
+      
+      document.querySelector('.dottedLine3').style.visibility = 'visible';
+    
+    }
     
     //{props.children}
       
@@ -31,7 +43,13 @@ const ModalThree = (props) => {
         <div>
 
       
-      <button className='open-modal one' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
+      <button className='open-modal one' onClick={()=> {setmodalIsOpen(true)
+    viewLine()  
+    viewButton()
+    }}
+      
+      
+      onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
 
       
       <Modal isOpen={modalIsOpen}
@@ -50,22 +68,29 @@ const ModalThree = (props) => {
 
       <div className='header-modal'>
         <button className='close-modal' onClick={() => setmodalIsOpen(false) }>-</button>
-    
+        <h4>{props.title}</h4>
+
+        <div className='goals-main'>
+        <img className='goals' src={One} />
+        <img className='goals' src={Three} />
+        <img className='goals' src={Twelve} />
+        </div>
+
       </div>
 
           
           <div className="App">
       <Accordion
-        title="What is your return policy?"
+        title="INTENTION"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
       />
       <Accordion
-        title="How do I track my order?"
+        title="RESPONSIBLE"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       />
       <Accordion
-        title="Can I purchase items again?"
+        title="TARGET"
         content="
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </br>

@@ -8,6 +8,10 @@ import { doc } from 'prettier'
 
 import Sidebar from '../components/sidebar'
 
+import One from '../images/goals/1.png'
+import Three from '../images/goals/3.png'
+import Twelve from '../images/goals/12.png'
+
 const ModalOne = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
@@ -67,22 +71,30 @@ const ModalOne = (props) => {
 
       <div className='header-modal'>
         <button className='close-modal' onClick={() => setmodalIsOpen(false) }>-</button>
+        
         <h4>{props.title}</h4>
+
+        <div className='goals-main'>
+        <img className='goals' src={One} />
+        <img className='goals' src={Three} />
+        <img className='goals' src={Twelve} />
+        </div>
+        
       </div>
 
           
           <div className="App">
       <Accordion
-        title="What is your return policy?"
+        title="INTENTION"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
       />
       <Accordion
-        title="How do I track my order?"
+        title="RESPONSIBLE"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       />
       <Accordion
-        title="Can I purchase items again?"
+        title="TARGET"
         content="
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </br>

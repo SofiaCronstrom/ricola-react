@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react'
 import Accordion from './popup'
 import Modal from 'react-modal'
 
-
+import One from '../images/goals/13.png'
+import Three from '../images/goals/16.png'
+import Twelve from '../images/goals/8.png'
 
 const ModalTwo = (props) => {
 
@@ -15,13 +17,24 @@ const ModalTwo = (props) => {
       
       document.querySelector('.svg2').style.visibility = 'visible';
     
-    
     }
 
     function removeAnimation(){
       document.querySelector('.svg2').style.visibility = "hidden";
     
     };
+
+    function viewButton(){
+      
+      document.getElementById('sideTwo').style.visibility = 'visible';
+    
+    }
+
+    function viewLine(){
+      
+      document.querySelector('.dottedLine2').style.visibility = 'visible';
+    
+    }
 
 
     
@@ -34,7 +47,15 @@ const ModalTwo = (props) => {
         <div>
 
       
-      <button className='open-modal one' onClick={()=> setmodalIsOpen(true)} onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
+      <button className='open-modal one' onClick={()=> {setmodalIsOpen(true)
+     viewButton()  
+     viewLine()
+    } 
+      
+    }
+      
+      
+      onMouseOver={changeAnimation} onMouseLeave={removeAnimation} ></button>
 
       
       <Modal isOpen={modalIsOpen}
@@ -54,21 +75,26 @@ const ModalTwo = (props) => {
       <div className='header-modal'>
         <button className='close-modal' onClick={() => setmodalIsOpen(false) }>-</button>
         <h4>{props.title}</h4>
-      </div>
 
+        <div className='goals-main'>
+        <img className='goals' src={One} />
+        <img className='goals' src={Three} />
+        <img className='goals' src={Twelve} />
+        </div>
+      </div>
           
           <div className="App">
       <Accordion
-        title="What is your return policy?"
+        title="INTENTION"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
       />
       <Accordion
-        title="How do I track my order?"
+        title="RESPONSIBLE"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       />
       <Accordion
-        title="Can I purchase items again?"
+        title="TARGET"
         content="
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </br>

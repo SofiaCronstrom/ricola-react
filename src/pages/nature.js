@@ -20,8 +20,13 @@ import Line2 from '../images/line2.svg'
 import Line3 from '../images/line3.svg'
 
 import DottedLine1 from '../images/dottedLine1.svg'
+import DottedLine2 from '../images/dottedLine2.svg'
+import DottedLine3 from '../images/dottedLine3.svg'
 
 import Sidebar from '../components/sidebar'
+
+import ModalInfo from '../components/modaInfo'
+import Suggestion from '../components/suggestion'
 
 const Nature = () => {
  
@@ -31,6 +36,18 @@ function changeAnimation(){
     document.querySelector('.leaf').style.display = 'block' 
     document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
   
+  }
+
+  var opacity = 0;
+  function viewMainLine(){
+      
+    document.querySelector('.modal-main').style.visibility = 'visible';
+    if (opacity<1) {
+        opacity += .1;
+        setTimeout(function(){viewMainLine()},300);
+     }
+     document.querySelector('.modal-main').style.opacity = opacity;
+    
   }
     return(
 
@@ -48,7 +65,7 @@ function changeAnimation(){
             
                 <div className='circle-subpage'>
                    
-                    <div className='yellow-button' id='business' >
+                    <div className='yellow-button' id='business' onClick={()=> {viewMainLine()}}>
                         <div className='circle-text'>
                             <span>N</span>
                             <br></br>
@@ -73,9 +90,28 @@ function changeAnimation(){
                     
                 </div>
                 <img className='dottedLine1' src={DottedLine1}/>
-                <Sidebar/>
-            
+                 
+                    <Sidebar sideId='sideOne' 
+                    
+                    imageOne={require('../images/workerTwo.png')}/>
+                    
+                <img className='dottedLine2' src={DottedLine2}/>
+
+                    <Sidebar sideId='sideTwo' 
+                    
+                    imageOne={require('../images/newWorker.jpg')}/>
+                    
+                <img className='dottedLine3' src={DottedLine3}/>
+
+                    <Sidebar sideId='sideThree'
+                    imageOne={require('../images/newWorker.jpg')}
+                    />
+
+                    <Suggestion/>
+                    <ModalInfo/>
             </div>
+
+          
 
         </div>
     )
