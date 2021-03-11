@@ -8,6 +8,10 @@ const ModalSuggestion = (props) => {
 
     const [modalIsOpen, setmodalIsOpen] = useState(false)
 
+  function alertme(){
+    alert('jeje')
+  }
+
     return(
         
         <div>
@@ -20,7 +24,7 @@ const ModalSuggestion = (props) => {
 
       <Modal isOpen={modalIsOpen}
       onRequestClose={() => setmodalIsOpen(false)}
-      className='modalInfo'
+      className='modalSuggestion'
       style={
         {
           overlay : {
@@ -30,24 +34,27 @@ const ModalSuggestion = (props) => {
       }
       >
      <div className="App">
-      <div className='header-modal'>
+      <div className='header-suggestion'>
         <button className='close-info' onClick={() => setmodalIsOpen(false) }>-</button>
         <h4>Suggestion</h4>
       </div>
-      <form className="form">
+      <div className='form-center'>
+      <form className="form" >
         
         <input type="text" name="name" placeholder="Name" className="submit-name" />
         <label className='submit-label'>Footsteps</label>
+        <div class="custom-select">
         <select className="submit-footstep">
           <option>Ricola</option>
           <option>Nature</option>
           <option>People</option>
           <option>Business</option>
         </select>
+</div>
         <textarea className='submit-area' rows="8" cols="25" placeholder="Message"></textarea>
-        <input className="submit-button" type="button" value="SEND" />
+        <input className="submit-button" type="submit" value="SEND" />
     </form>
-          
+    </div>
 
 
           

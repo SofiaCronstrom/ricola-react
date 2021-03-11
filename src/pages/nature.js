@@ -28,6 +28,8 @@ import Sidebar from '../components/sidebar'
 import ModalInfo from '../components/modaInfo'
 import Suggestion from '../components/suggestion'
 
+import HomeIcon from '../images/homeBtn.svg'
+
 const Nature = () => {
  
 
@@ -44,7 +46,7 @@ function changeAnimation(){
     document.querySelector('.modal-main').style.visibility = 'visible';
     if (opacity<1) {
         opacity += .1;
-        setTimeout(function(){viewMainLine()},300);
+        setTimeout(function(){viewMainLine()},200);
      }
      document.querySelector('.modal-main').style.opacity = opacity;
     
@@ -90,22 +92,11 @@ function changeAnimation(){
                     
                 </div>
                 <img className='dottedLine1' src={DottedLine1}/>
-                 
-                    <Sidebar sideId='sideOne' 
-                    
-                    imageOne={require('../images/workerTwo.png')}/>
-                    
+                <Sidebar sideId='sideOne' imgId='second' openNavigation='sidebarOne'/>
                 <img className='dottedLine2' src={DottedLine2}/>
-
-                    <Sidebar sideId='sideTwo' 
-                    
-                    imageOne={require('../images/newWorker.jpg')}/>
-                    
+                <Sidebar sideId='sideTwo' imgId='first' openNavigation='sideBarTwo'/>                   
                 <img className='dottedLine3' src={DottedLine3}/>
-
-                    <Sidebar sideId='sideThree'
-                    imageOne={require('../images/newWorker.jpg')}
-                    />
+                <Sidebar sideId='sideThree' imgId='third' openNavigation='sideBarThree'/>
 
                     <Suggestion/>
                     <ModalInfo/>

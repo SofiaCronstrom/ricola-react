@@ -14,26 +14,31 @@ const IndexPage = () => {
   function mainBackground(){
     document.querySelector('.main-bg').style.backgroundImage = `url(${Main})` 
     document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+    document.querySelector('.h1-home').style.visibility = "visible";
   }
 
   function changeBackground(){
     document.querySelector('.main-bg').style.backgroundImage = `url(${Farmer})` 
     document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+    document.querySelector('.h1-home').style.visibility = "hidden";
   }
 
   function changeBackgroundPeople(){
     document.querySelector('.main-bg').style.backgroundImage = `url(${People})` 
     document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+    document.querySelector('.h1-home').style.visibility = "hidden";
   }
 
   function changeBackgroundBusiness(){
     document.querySelector('.main-bg').style.backgroundImage = `url(${Business})` 
     document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+    document.querySelector('.h1-home').style.visibility = "hidden";
   }
 
   function changeBackgroundRicola(){
     document.querySelector('.main-bg').style.backgroundImage = `url(${Ricola})` 
     document.querySelector('.main-bg').style.transition = "all 1.5s ease-in-out";
+    document.querySelector('.h1-home').style.visibility = "hidden";
   }
 
   return(
@@ -41,7 +46,7 @@ const IndexPage = () => {
     <div className='main'>
       <div className='main-bg'  style={{ backgroundImage: `url(${Main})` }}>
         <Header/>
-            <h1>
+            <h1 className='h1-home'>
                 Explore our <span className='span'>footsteps  employee initiatives</span> in the map bellow
             </h1>
         <div className='all-circles'>

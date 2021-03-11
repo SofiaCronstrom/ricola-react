@@ -399,7 +399,39 @@ path {
   
 }
 
-.sidebar {
+
+
+.sidebarOne{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(6px);
+  color: rgb(28, 31, 29);
+text-align: left;
+  transition: 0.5s;
+  font-family: 'Rosario', sans-serif;
+}
+
+.sideBarTwo {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(6px);
+  color: rgb(28, 31, 29);
+text-align: left;
+  transition: 0.5s;
+  font-family: 'Rosario', sans-serif;
+}
+
+.sideBarThree {
   height: 100%;
   width: 0;
   position: fixed;
@@ -415,7 +447,7 @@ text-align: left;
 }
 
 .sidebar-p{
-  color: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
 }
 
 .sidebar-filter::before{
@@ -451,8 +483,7 @@ text-align: left;
 .image{
  float: left;
  margin: 20px;
- width: 212px;
- height: 245px;
+
 }
 
 
@@ -507,6 +538,10 @@ h1 span{
     font-weight: 900;
     margin-top: 20px;
     
+}
+
+.close-sidebar:hover{
+  background-color: var(--green);;
 }
 
 .close-info{
@@ -639,11 +674,41 @@ h1 span{
   width: 30px;
 }
 
+.legend p:hover { 
+  transform: scale(1.1);
+}
+
+.legendInfo:hover { 
+  transform: scale(1.1);
+}
+
+.suggestion p:hover{
+  transform: scale(1.1);
+}
+
 .modalInfo{
-  width: 360px;
-  height: 300px;
+  width: 370px;
+  height: 375px;
   color: #ffffff;
-  transform: translate(25%, 85%);
+  transform: translate(25%, 50%);
+  font-family: 'Roboto', sans-serif;
+  outline: none; 
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(7px);
+  padding: 20px;
+  
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+.modalSuggestion{
+  width: 300px;
+  height: 350px;
+  color: #ffffff;
+  transform: translate(25%, 45%);
   font-family: 'Roboto', sans-serif;
   outline: none; 
   background-color: rgba(255, 255, 255, .15);  
@@ -671,12 +736,17 @@ h1 span{
   backdrop-filter: blur(7px);
 }
 
+.form-center{
+  text-align: center;
+}
+
 .form{
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+
 border: none;
 width: 247px;
+text-align: center;
 font-family: 'Roboto', sans-serif;
 text-align: center;
 margin-left: auto;
@@ -688,10 +758,10 @@ margin-right: auto;
   border: none;
   margin-bottom: 7px;
   font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  padding: 4px;
- 
+  
+  padding: 10px;
 }
+
 
 textarea {
   resize: none;
@@ -706,12 +776,20 @@ textarea {
   align-self: center;
   width:30%;
   margin-top: 5px;
+  padding: 5px;
+  cursor: pointer;
 } 
+
+.submit-button:hover{
+  box-shadow: 0px 6px 19px 16px rgba(239, 242, 245, 0.399);
+}
 .submit-footstep{
-  width: 104%;
-  padding: 2px;
+  width: 100%;
   margin-bottom: 13px;
   color: rgb(114, 114, 114); 
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
 }
 input:focus{
   outline: none;
@@ -741,4 +819,27 @@ select:focus{
   flex: 1 0 0%;
   text-align: right;
 
+}
+
+.suggestingImg{
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  
+}
+
+.header-suggestion{
+  display: flex;
+ 
+ text-align: center;
+}
+
+.infoTextOne{
+  padding-right: 3px;
+}
+
+
+.img-sidebar{
+  width: 220px;
+  
 }

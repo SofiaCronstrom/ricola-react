@@ -29,10 +29,23 @@ import ModalInfo from '../components/modaInfo'
 import Suggestion from '../components/suggestion'
 
 const People = () => {
-    function viewMainLine(){
+    function changeAnimation(){
       
+        document.querySelector('.leaf').style.display = 'block' 
+        document.querySelector('.leaf').style.transition = "all 1.5s ease-in-out";
+      
+      }
+    
+      var opacity = 0;
+      function viewMainLine(){
+          
         document.querySelector('.modal-main').style.visibility = 'visible';
-      
+        if (opacity<1) {
+            opacity += .1;
+            setTimeout(function(){viewMainLine()},200);
+         }
+         document.querySelector('.modal-main').style.opacity = opacity;
+        
       }
 return (
 
@@ -47,52 +60,42 @@ return (
                 <Svg3/>
             </div>
             
-                <div className='circle-subpage'>
+            <div className='circle-subpage'>
                    
-                    <div className='yellow-button' id='business' onClick={()=> {viewMainLine()}}>
-                        <div className='circle-text'>
-                            <span>P</span>
-                            <br></br>
-                            People
-                        </div>
-                    </div>
+                   <div className='yellow-button' id='business' onClick={()=> {viewMainLine()}}>
+                       <div className='circle-text'>
+                           <span>P</span>
+                           <br></br>
+                           People
+                       </div>
+                   </div>
 
-                    <div className='modal-main'>
-                    
-                    <img src={Line1} className='line' alt='line one' />
-                 
-                     <ModalOne title='People' cssClass='modal-first' changeAnimation='changeAnimation()'/>
-                     <img src={Line2} className='line two'/>
-                     <ModalTwo title='ricola' cssClass='modal-second' >
-                       <h3>h3</h3>
-                     </ModalTwo>
-                     <img src={Line3} className='line three'/>
-                     <ModalThree title='new' cssClass='modal-third'/>
-                     <NextPage link='/people' link2='http://localhost:8000'/>
-                    </div>
-
-                    
-                </div>
-                <img className='dottedLine1' src={DottedLine1}/>
-                 
-                    <Sidebar sideId='sideOne' 
-                    
-                    imageOne={require('../images/workerTwo.png')}/>
-                    
-                <img className='dottedLine2' src={DottedLine2}/>
-
-                    <Sidebar sideId='sideTwo' 
-                    
-                    imageOne={require('../images/worker.png')}/>
-                    
-                <img className='dottedLine3' src={DottedLine3}
+                   <div className='modal-main'>
+                   
+                   <img src={Line1} className='line' alt='line one' />
                 
-                imageOne={require('../images/workerTwo.png')}/>
-                
-                    <Sidebar sideId='sideThree'/>
+                    <ModalOne title='nature' cssClass='modal-first' changeAnimation='changeAnimation()'/>
+                    <img src={Line2} className='line two'/>
+                    <ModalTwo title='ricola' cssClass='modal-second' >
+                      <h3>h3</h3>
+                    </ModalTwo>
+                    <img src={Line3} className='line three'/>
+                    <ModalThree title='new' cssClass='modal-third'/>
+                    <NextPage link='/people' link2='http://localhost:8000'/>
+                   </div>
 
-                    <Suggestion/>
-                    <ModalInfo/>
+                   
+               </div>
+               <img className='dottedLine1' src={DottedLine1}/>
+               <Sidebar sideId='sideOne' imgId='second' openNavigation='sidebarOne'/>
+               <img className='dottedLine2' src={DottedLine2}/>
+               <Sidebar sideId='sideTwo' imgId='first' openNavigation='sideBarTwo'/>                   
+               <img className='dottedLine3' src={DottedLine3}/>
+               <Sidebar sideId='sideThree' imgId='third' openNavigation='sideBarThree'/>
+
+                   <Suggestion/>
+                   <ModalInfo/>
+               
     </div>
 </div>
 
