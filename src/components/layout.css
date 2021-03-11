@@ -843,3 +843,19 @@ select:focus{
   width: 220px;
   
 }
+
+
+.home-icon{
+  width: 100%;
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  transform: translate(-50%, );
+  margin-left: 3em;
+  width: 30px;
+  cursor: pointer;
+}
+
+.home-icon:hover { 
+  transform: scale(1.1);
+}

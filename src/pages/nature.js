@@ -64,7 +64,11 @@ function changeAnimation(){
                 <Svg2/>
                 <Svg3/>
             </div>
-            
+
+            <Link to='/'>
+            <img className='home-icon' src={HomeIcon}/>
+            </Link>
+
                 <div className='circle-subpage'>
                    
                     <div className='yellow-button' id='business' onClick={()=> {viewMainLine()}}>
